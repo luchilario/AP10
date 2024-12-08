@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeIn 2s forwards, App-logo-spin infinite 20s linear;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor do logo */
+  border-radius: 50%; /* Tornar o logo arredondado */
+}
+
+.App-logo:hover {
+  transform: rotate(720deg); /* Mais rotação ao passar o mouse */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+  border-radius: 10px; /* Bordas arredondadas no cabeçalho */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.App-header:hover {
+  background-color: #333840; /* Uma cor mais suave quando o usuário passa o mouse */
+}
+
+.App-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('background-image.jpg'); /* Escolha uma imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: translateY(-50%);
+  animation: parallax 10s infinite linear;
+}
+
+.App-link {
+  color: #61dafb;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.App-link:hover {
+  color: #21a1f1;
+  transform: scale(1.1); /* Aumenta o tamanho do link ao passar o mouse */
+}
+
+@keyframes parallax {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
